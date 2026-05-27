@@ -15,10 +15,11 @@ def home(request):
     return render(request, 'website/index.html') 
 
 def about(request):
-    return HttpResponse("This is the about page.")
+    
+    return render(request, 'website/index_1.html')
 
 def contact(request):
-    return HttpResponse("This is the contact page.")
+    return render(request, 'website/index_2.html')
 
 # route is defined in urls.py file, we will create a url pattern for each view function and map it to the corresponding URL.
 
