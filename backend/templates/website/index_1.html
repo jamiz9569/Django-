@@ -1,13 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1> this is about page where you can find more information about us</h1>
-    <link rel="stylesheet" href="{% static 'style_1.css' %}">
-</body>
-</html>
+{% extends 'layout.html' %}  # this is how we extend the layout.html file and use its structure and blocks
+
+{% block title %}
+    About Page
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the About Page</h1>
+    <p>This is the content of the about page.</p>
+{% endblock %}
