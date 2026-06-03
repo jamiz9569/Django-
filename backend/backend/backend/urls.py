@@ -30,6 +30,8 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('jamiz/', include('jamiz.urls')),  # Include URLs from the jamiz app
+    path("__reload__/", include("django_browser_reload.urls")),  # For django-browser-reload
 ]
+
 
 
