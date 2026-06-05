@@ -39,10 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "jamiz",
-    'tailwind',
-    'theme',
-    'django_browser_reload',
+    "jamiz", # THIS IS THE NAME OF THE APP WE CREATED, MAKE SURE TO ADD IT TO THE INSTALLED_APPS
+    'tailwind', # THIS IS THE TAILWIND CSS APP, MAKE SURE TO INSTALL IT USING PIP AND ADD IT TO THE INSTALLED_APPS  
+    'theme',  # THIS IS THE NAME OF THE TAILWIND CSS APP, MAKE SURE TO CREATE IT USING THE COMMAND "python manage.py tailwind init theme" AND ADD IT TO THE INSTALLED_APPS
+    'django_browser_reload', # THIS IS THE DJANGO BROWSER RELOAD APP, MAKE SURE TO INSTALL IT USING PIP AND ADD IT TO THE INSTALLED_APPS
 ]
 
 NPM_BIN_PATH = r"D:\node.js\npm.cmd" # PATH TO YOUR NPM.EXE FILE, THIS IS REQUIRED FOR TAILWIND TO WORK, IF YOU HAVE INSTALLED NODE.JS THEN YOU CAN FIND THIS FILE IN THE NODE.JS INSTALLATION DIRECTORY
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware", 
 ]
 
 ROOT_URLCONF = "backend.urls"
