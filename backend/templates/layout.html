@@ -1,0 +1,25 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    {% block title %}
+    default title
+    {% endblock %}
+</title>
+<link rel ="stylesheet" href="{% static 'style.css' %}"> 
+{% tailwind_css %}   
+</head>
+<body>
+    <nav> this is our nav bar </nav>
+    {% block content %}{% endblock %}  
+</body>
+</html>
+
+# This is the base template for our Django project.
+# It includes the necessary HTML structure and links to the static CSS file and Tailwind CSS. 
+ 
+# The `{% block title %}` and `{% block content %}` tags allow us to define specific content for each page that extends this base template.
