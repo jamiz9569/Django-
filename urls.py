@@ -18,6 +18,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -31,9 +33,10 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('jamiz/', include('jamiz.urls')),  # Include URLs from the jamiz app
     path("__reload__/", include("django_browser_reload.urls")),  # For django-browser-reload
-
     
-]
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)   
+
 
 
 
